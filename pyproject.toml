@@ -1,0 +1,40 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "t20i-tactical-analytics"
+version = "0.1.0"
+description = "Reproducible T20I tactical analytics: extract, feature, and WP visualization pipeline."
+readme = "README.md"
+requires-python = ">=3.9"
+license = {text = "MIT"}
+authors = [
+  { name = "Your Name", email = "you@example.com" }
+]
+keywords = ["cricket", "t20", "analytics", "win-probability", "sports-analytics"]
+classifiers = [
+  "Programming Language :: Python :: 3",
+  "License :: OSI Approved :: MIT License",
+  "Operating System :: OS Independent",
+]
+
+dependencies = [
+  "numpy>=1.22",
+  "pandas>=1.5",
+  "matplotlib>=3.6",
+  "scikit-learn>=1.1",
+]
+
+[project.scripts]
+t20-extract = "scripts._entrypoints:extract_main"
+t20-features = "scripts._entrypoints:features_main"
+t20-wp = "scripts._entrypoints:wp_main"
+t20-fig-indpak = "scripts._entrypoints:fig_indpak_main"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
+include = ["t20*"]

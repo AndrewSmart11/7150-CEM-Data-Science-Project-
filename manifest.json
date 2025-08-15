@@ -1,0 +1,30 @@
+{
+  "scripts": {
+    "extract": "scripts/01_extract_matches.py",
+    "features": "scripts/02_build_features.py",
+    "wp_pipeline": "scripts/03_wp_pipeline.py",
+    "figures_ind_pak": "scripts/04_figures_ind_pak.py"
+  },
+  "artifacts": {
+    "data_processed": [
+      "data/processed/ENG_WI_2016_WT20_Final_ball_by_ball.csv",
+      "data/processed/ENG_WI_2016_WT20_Final_ball_by_ball_features.csv",
+      "data/processed/IND_PAK_2022_T20WC_ball_by_ball.csv",
+      "data/processed/IND_PAK_2022_T20WC_ball_by_ball_features.csv"
+    ],
+    "outputs_tables": [
+      "outputs/tables/ENG_WI_2016_WT20_Final_ball_by_ball_features_wp_enriched.csv",
+      "outputs/tables/IND_PAK_2022_T20WC_ball_by_ball_features_wp_enriched.csv"
+    ],
+    "outputs_figures": [
+      "outputs/figures/ENG_WI_2016_WT20_Final_ball_by_ball_features_calibration.png",
+      "outputs/figures/ENG_WI_2016_WT20_Final_ball_by_ball_features_delta_hist.png",
+      "outputs/figures/ENG_WI_2016_WT20_Final_ball_by_ball_features_timeline.png",
+      "outputs/figures/IND_PAK_2022_T20WC_ball_by_ball_features_calibration.png",
+      "outputs/figures/IND_PAK_2022_T20WC_ball_by_ball_features_delta_hist.png",
+      "outputs/figures/IND_PAK_2022_T20WC_ball_by_ball_features_timeline.png",
+      "outputs/figures/figure_x_wp_timeline_ind_pak_2022.png",
+      "outputs/figures/figure_y_delta_wp_histogram_ind_pak_2022.png"
+    ]
+  }
+}
